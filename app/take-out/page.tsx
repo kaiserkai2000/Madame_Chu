@@ -14,97 +14,91 @@ const chineseMenu = [
     name: "Spicy firecracker chicken",
     chinese: "麻香辣子鸡丁",
     price: "$18",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Spicy%20firecracker%20chicken.png",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Deep-fried charcoal crispy tofu",
     chinese: "黑炭炸豆腐",
     price: "$14",
     isVegan: true,
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Deep%20fried%20charcoal%20crispy%20tofu%20Vegan.png",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Crispy black garlic pork belly",
     chinese: "黑蒜酥脆五花肉",
     price: "$28",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Crispy%20black%20garlic%20pork%20belly.png",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Truffle French fries",
     chinese: "松露薯条",
     price: "$12",
     isVegan: true,
-    image: "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Truffle%20French%20fries.jpg",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Shanghai smoked cod fish",
     chinese: "上海熏鳕鱼",
     price: "$28",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Shanghai%20smoked%20cod%20fish.png",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Garlic Pea Sprout (Dou Miao) stir fry",
     chinese: "香炒豆苗",
     price: "$16",
     isVegan: true,
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Garlic%20Pea%20Sprout%20(Dou%20Miao)%20stir%20fry.jpg",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Crispy Cordycep flowers",
     chinese: "避风塘虫草花",
     price: "$26",
     isVegan: true,
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Crispy%20Cordycep%20flowers%20(Vegan).png",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "French bean with olive leaves & Sakura shrimp",
     chinese: "樱花虾榄菜炒四季豆",
     price: "$18",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/French%20bean%20with%20olive%20leaves%20and%20Sakura%20shrimps.png",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Passion fruit tiger prawn balls",
     chinese: "百香果老虎虾球",
     price: "$28",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Passion%20fruit%20tiger%20prawn%20ball.png",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Black truffle seafood egg white fried rice",
     chinese: "黑松露蛋白炒饭",
     price: "$24",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Black%20truffle%20seafood%20egg%20white%20fried%20rice.png",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "XO fried rice with crab meat",
     chinese: "XO蟹肉海鲜炒饭",
     price: "$24",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/XO%20fried%20rice%20with%20crab%20meat.png",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Shanghai noodles with scallops",
     chinese: "葱油带子捞上海面",
     price: "$20",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Shanghai%20noodle%20with%20scallops.png",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Wok-fried seafood mee sua",
     chinese: "家乡海鲜面线",
     price: "$18",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Wok-fried%20seafood%20mee%20sua.png",
+    image: "/placeholder.svg?height=200&width=200",
   },
-  { name: "Fragrant white rice", chinese: "白饭", price: "$2", isVegan: true, image: "/placeholder.svg" },
+  {
+    name: "Fragrant white rice",
+    chinese: "白饭",
+    price: "$2",
+    isVegan: true,
+    image: "/placeholder.svg?height=200&width=200",
+  },
 ]
 
 const vietnameseMenu = [
@@ -112,133 +106,117 @@ const vietnameseMenu = [
     name: "Crunchy Vietnamese beef salad",
     vietnamese: "Gỏi bò",
     price: "$20",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Crunchy%20Vietnamese%20beef%20salad.jpg",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Spicy steamed clams",
     vietnamese: "Nghêu hấp sả",
     price: "$25",
-    image: "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Spicy%20steamed%20clams.png",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Mini pancakes with prawn & coconut cream",
     vietnamese: "Bánh Khọt",
     price: "$16",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Mini%20pancakes%20with%20prawn%20and%20coconut%20cream.jpg",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Vietnamese rice paper pizza",
     vietnamese: "Bánh Tráng Nướng",
     price: "$10",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Vietnamese%20rice%20paper%20pizza.jpg",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Vietnamese fried spring rolls",
     vietnamese: "Chả giò chay",
     price: "$12",
     isVegan: true,
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Fried%20Vegan%20spring%20rolls.jpg",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Vietnamese fried pork & prawn spring rolls",
     vietnamese: "Chả giò",
     price: "$15",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Fried%20spring%20rolls%20platter%20Pork%20Seafood%20Vegetarian.png",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Crunchy Vietnamese salad with fried tofu",
     vietnamese: "Gỏi chay",
     price: "$14",
     isVegan: true,
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Crunchy%20Vietnamese%20Vegan%20salad%20with%20fried%20tofu.jpg",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Crunchy Vietnamese chicken salad",
     vietnamese: "Gỏi gà",
     price: "$16",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Crunchy%20Vietnamese%20chicken%20salad.png",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Crab noodle soup with brown noodles",
     vietnamese: "Bánh đa cua",
     price: "$24",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Crab%20noodle%20soup%20with%20brown%20noodles.jpg",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Chicken glass noodle soup",
     vietnamese: "Miến gà",
     price: "$20",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Chicken%20glass%20noodles%20soup.png",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Spicy beef & pork noodle soup",
     vietnamese: "Bún bò",
     price: "$22",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Spicy%20beef%20noodle%20soup.png",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Grilled beef wrapped in betel leaves",
     vietnamese: "Bò lá lốt",
     price: "$16",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Grilled%20beef%20wrapped%20in%20betel%20leaves.png",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Madame's premium beef pho",
     vietnamese: "Madame's phở bò",
     price: "$28",
-    image: "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Wagyu%20Beef%20Pho.png",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Rice with grilled pork chop, meat loaf & sunny-side up egg",
     vietnamese: "Cơm sườn",
     price: "$22",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Rice%20with%20grilled%20pork%20chop%2C%20meat%20loaf%20and%20sunny-side%20up.png",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Vietnamese beef stew with crispy baguette",
     vietnamese: "Bò Kho bánh mì",
     price: "$20",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Vietnamese%20beef%20stew%20with%20crispy%20baguette.png",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Dry pork & seafood noodles",
     vietnamese: "Hủ tiếu khô",
     price: "$22",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Dry%20pork%20and%20seafood%20noodles.jpg",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Chicken pho",
     vietnamese: "Phở gà",
     price: "$22",
-    image: "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Chicken%20Pho.jpg",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Southern grilled pork vermicelli",
     vietnamese: "Bún thịt nướng",
     price: "$21",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Southern%20Dry%20Rice%20Vermicelli%20with%20grilled%20Pork%20and%20fried%20spring%20roll.jpg",
+    image: "/placeholder.svg?height=200&width=200",
   },
   {
     name: "Fine rice vermicelli with grilled beef wrapped in betel leaves",
     vietnamese: "Bánh hỏi bò lá lốt",
     price: "$19",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Fine%20rice%20vermicelli%20with%20grilled%20beef%20wrapped%20in%20betel%20leaves.jpg",
+    image: "/placeholder.svg?height=200&width=200",
   },
 ]
 

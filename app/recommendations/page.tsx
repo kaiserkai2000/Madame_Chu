@@ -28,8 +28,7 @@ const recommendations = [
     vietnameseName: "Bò lá lốt",
     description:
       "This is a traditional Vietnamese dish where minced beef mixed with garlic and shallots are wrapped in Betel leaves and grilled to perfection. Betel leaves are not a common herb locally and are sourced directly from Vietnam. These unique heart-shaped leaves, with its distinctive minty flavor combined with the earthiness aroma of ground beef leaves one with an insatiable desire for more.",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Grilled%20beef%20wrapped%20in%20betel%20leaves.png",
+    image: "/placeholder.svg?height=400&width=600",
     alt: "Grilled beef wrapped in betel leaves - Traditional Vietnamese beef rolls with aromatic betel leaves",
   },
   {
@@ -38,7 +37,7 @@ const recommendations = [
     vietnameseName: "Phở bò",
     description:
       'Pho is possibly one of the most well-known dishes in the world to the extent that the word "Pho" was even added to the Merriam-Webster Dictionary in 2014. The soul of a Pho lies in the broth which requires 4-5 hours of low heat boiling and in the cuts of the beef. Using different cuts of meat with varying textures makes Madame Chu\'s beef pho really stand out from the crowd.',
-    image: "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Wagyu%20Beef%20Pho.png",
+    image: "/placeholder.svg?height=400&width=600",
     alt: "Premium Beef Pho - Vietnamese noodle soup with premium beef slices",
   },
   {
@@ -47,8 +46,7 @@ const recommendations = [
     vietnameseName: "Bún bò",
     description:
       "This beef noodle originates from Central Vietnam, in the city of Huế. Vietnamese food is not known to be spicy like its Thai neighbours but spicy food is celebrated in the city of Huế. The dish is served with beef shank, pork slices and Huế pork sausages with Vietnamese herbs.",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Spicy%20beef%20noodle%20soup.png",
+    image: "/placeholder.svg?height=400&width=600",
     alt: "Spicy beef noodle soup - Aromatic beef broth with rice noodles",
   },
   {
@@ -57,8 +55,7 @@ const recommendations = [
     vietnameseName: "Bò Kho bánh mì",
     description:
       "Vietnamese bò kho (beef stew) is packed with tender, fall-apart braised chunks of beef loaded with herbs, aromatics and a delicious gravy that tastes heavenly with crispy Vietnamese baguette.",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Vietnamese%20beef%20stew%20with%20crispy%20baguette.png",
+    image: "/placeholder.svg?height=400&width=600",
     alt: "Vietnamese beef stew with baguette - Rich beef stew served with crusty bread",
   },
 ]

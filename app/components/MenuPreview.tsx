@@ -3,31 +3,32 @@ import Image from "next/image"
 
 const previewItems = [
   {
-    name: "Phở bò",
-    description: "Premium Beef Pho",
-    image: "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Wagyu%20Beef%20Pho.png",
-    alt: "Premium Beef Pho - Vietnamese noodle soup with premium beef",
-  },
-  {
-    name: "Shanghai smoked cod fish",
-    description: "上海熏鳕鱼",
+    name: "Madame's Chu Premium pho",
+    description: "Premium beef pho",
     image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Shanghai%20smoked%20cod%20fish.png",
-    alt: "Shanghai smoked cod fish - Traditional smoked cod fish preparation",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7.Madame%27s%20Chu%20Premium%20pho-vMGIlIeLP1V0vzrpRJaseErzhU9FnO.jpeg",
+    alt: "Madame's Chu Premium pho - Premium beef pho",
   },
   {
-    name: "Passion fruit tiger prawn ball",
-    description: "百香果老虎虾球",
-    image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Passion%20fruit%20tiger%20prawn%20ball.png",
-    alt: "Passion fruit tiger prawn ball - Crispy prawn balls with tropical sauce",
-  },
-  {
-    name: "Bò lá lốt",
+    name: "Bo la lot",
     description: "Grilled beef wrapped in betel leaves",
     image:
-      "https://raw.githubusercontent.com/kaiserkai2000/Madame_Chu/main/public/images/Grilled%20beef%20wrapped%20in%20betel%20leaves.png",
-    alt: "Grilled beef wrapped in betel leaves - Traditional Vietnamese beef rolls",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4.Bo%20la%20lotGrilled%20beef%20wrapped%20in%20betel%20leaves-AYx4m1v0LffZyYH4Tucjp5B89Hgath.jpeg",
+    alt: "Bo la lot - Grilled beef wrapped in betel leaves",
+  },
+  {
+    name: "Banh Khot",
+    description: "Mini pancakes with prawn and coconut cream",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3.Banh%20KhotMini%20pancakes%20with%20prawn%20and%20coconut%20cream-IELODBqJptObzvXqCFvdMjiiwpqreB.jpeg",
+    alt: "Banh Khot - Mini pancakes with prawn and coconut cream",
+  },
+  {
+    name: "Banh Trang Nuong",
+    description: "Vietnamese rice paper pizza",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5.Banh%20Trang%20NuongVietnamese%20rice%20paper%20pizza-SuJilow4Z0Iv1AmpIyHPz5a3vBXwPa.jpeg",
+    alt: "Banh Trang Nuong - Vietnamese rice paper pizza",
   },
 ]
 
