@@ -52,6 +52,9 @@ export default function Header() {
               <Link href="/menu" className="text-purple-200 hover:text-purple-400 transition-colors">
                 Menu
               </Link>
+              <Link href="/vip-menu" className="text-purple-200 hover:text-purple-400 transition-colors">
+                VIP Menu
+              </Link>
               <Link href="/recommendations" className="text-purple-200 hover:text-purple-400 transition-colors">
                 Recommendations
               </Link>
@@ -78,6 +81,9 @@ export default function Header() {
           <div className="md:hidden mt-4 space-y-4">
             <Link href="/menu" className="block text-purple-200 hover:text-purple-400 transition-colors">
               Menu
+            </Link>
+            <Link href="/vip-menu" className="block text-purple-200 hover:text-purple-400 transition-colors">
+              VIP Menu
             </Link>
             <Link href="/recommendations" className="block text-purple-200 hover:text-purple-400 transition-colors">
               Recommendations

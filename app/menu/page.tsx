@@ -306,9 +306,7 @@ export default function FullMenu() {
         <h1 className="text-4xl font-bold text-center mb-12 text-purple-200">Our Complete Menu</h1>
 
         <div className="text-center mb-12">
-          <p className="text-purple-100 text-lg">
-            Discover our authentic Vietnamese and Chinese cuisine
-          </p>
+          <p className="text-purple-100 text-lg">Discover our authentic Vietnamese and Chinese cuisine</p>
         </div>
 
         {/* Vietnamese Menu Section */}
