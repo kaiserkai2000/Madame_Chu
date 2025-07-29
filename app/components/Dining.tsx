@@ -133,14 +133,13 @@ export default function Dining() {
             </a>
             .
           </p>
-          <a
-            href="https://www.sevenrooms.com/explore/madamechu/reservations/create/search?tracking=Website"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-purple-600 text-white py-3 px-8 rounded-full text-xl font-semibold hover:bg-purple-500 transition duration-300"
+          <button
+            id="sr-res-root-dining"
+            className="bg-purple-600 text-white py-3 px-8 rounded-full text-xl font-semibold hover:bg-purple-500 transition duration-300 cursor-pointer border-0 outline-none"
+            type="button"
           >
             Reserve Now
-          </a>
+          </button>
         </div>
       </div>
 

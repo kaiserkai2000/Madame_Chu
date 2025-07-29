@@ -58,14 +58,12 @@ export default function Header() {
               <Link href="/recommendations" className="text-purple-200 hover:text-purple-400 transition-colors">
                 Recommendations
               </Link>
-              <Link
-                href="https://www.sevenrooms.com/explore/madamechu/reservations/create/search?tracking=Website"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-purple-200 hover:text-purple-400 transition-colors"
+              <button
+                id="sr-res-root"
+                className="text-purple-200 hover:text-purple-400 transition-colors cursor-pointer"
               >
                 Reservations
-              </Link>
+              </button>
               <Link
                 href={pathname === "/" ? "/#contact" : "/?scrollTo=contact"}
                 className="text-purple-200 hover:text-purple-400 transition-colors"
@@ -79,26 +77,38 @@ export default function Header() {
         {/* Mobile dropdown menu */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 space-y-4">
-            <Link href="/menu" className="block text-purple-200 hover:text-purple-400 transition-colors">
+            <Link
+              href="/menu"
+              className="block text-purple-200 hover:text-purple-400 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
               Menu
             </Link>
-            <Link href="/vip-menu" className="block text-purple-200 hover:text-purple-400 transition-colors">
+            <Link
+              href="/vip-menu"
+              className="block text-purple-200 hover:text-purple-400 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
               VIP Menu
             </Link>
-            <Link href="/recommendations" className="block text-purple-200 hover:text-purple-400 transition-colors">
+            <Link
+              href="/recommendations"
+              className="block text-purple-200 hover:text-purple-400 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
               Recommendations
             </Link>
-            <Link
-              href="https://www.sevenrooms.com/explore/madamechu/reservations/create/search?tracking=Website"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-purple-200 hover:text-purple-400 transition-colors"
+            <button
+              id="sr-res-root-mobile"
+              className="block text-purple-200 hover:text-purple-400 transition-colors cursor-pointer text-left w-full"
+              onClick={() => setIsMenuOpen(false)}
             >
               Reservations
-            </Link>
+            </button>
             <Link
               href={pathname === "/" ? "/#contact" : "/?scrollTo=contact"}
               className="block text-purple-200 hover:text-purple-400 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
             >
               Contact
             </Link>

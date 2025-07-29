@@ -4,7 +4,8 @@ import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from "next"
 import StructuredData from "./components/StructuredData"
 import WhatsAppWidget from "./components/WhatsAppWidget"
-import type React from "react" // Added import for React
+import SevenRoomsWidget from "./components/SevenRoomsWidget"
+import type React from "react"
 import { Suspense } from "react"
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] })
@@ -53,6 +54,7 @@ export default function RootLayout({
         <StructuredData />
         <Suspense fallback={null}>{children}</Suspense>
         <WhatsAppWidget phoneNumber="6582054725" />
+        <SevenRoomsWidget />
         <Analytics />
       </body>
     </html>
