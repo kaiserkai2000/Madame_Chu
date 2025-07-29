@@ -5,54 +5,62 @@ import Script from "next/script"
 
 export default function SevenRoomsWidget() {
   useEffect(() => {
-    const initializeAllWidgets = () => {
-      if (typeof window !== "undefined" && (window as any).SevenroomsWidget) {
+    const initializeWidget = (buttonId: string, description: string) => {
+      const button = document.getElementById(buttonId)
+      if (button && !button.hasAttribute("data-sr-initialized")) {
         try {
-          // Initialize main header button
-          const headerButton = document.getElementById("sr-res-root")
-          if (headerButton) {
-            ;(window as any).SevenroomsWidget.init({
-              venueId: "madamechu",
-              triggerId: "sr-res-root",
-              type: "reservations",
-              styleButton: false,
-              clientToken: "",
-            })
-            console.log("Header button initialized")
-          }
-
-          // Initialize mobile header button
-          const mobileButton = document.getElementById("sr-res-root-mobile")
-          if (mobileButton) {
-            ;(window as any).SevenroomsWidget.init({
-              venueId: "madamechu",
-              triggerId: "sr-res-root-mobile",
-              type: "reservations",
-              styleButton: false,
-              clientToken: "",
-            })
-            console.log("Mobile button initialized")
-          }
-
-          // Initialize dining section button
-          const diningButton = document.getElementById("sr-res-root-dining")
-          if (diningButton) {
-            ;(window as any).SevenroomsWidget.init({
-              venueId: "madamechu",
-              triggerId: "sr-res-root-dining",
-              type: "reservations",
-              styleButton: false,
-              clientToken: "",
-            })
-            console.log("Dining button initialized")
-          }
-
-          console.log("All SevenRooms widgets initialized successfully")
+          ;(window as any).SevenroomsWidget.init({
+            venueId: "madamechu",
+            triggerId: buttonId,
+            type: "reservations",
+            styleButton: false,
+            clientToken: "",
+          })
+          button.setAttribute("data-sr-initialized", "true")
+          console.log(`${description} initialized successfully`)
         } catch (error) {
-          console.error("Error initializing SevenRooms widgets:", error)
+          console.error(`Error initializing ${description}:`, error)
         }
       }
     }
+
+    const initializeAllWidgets = () => {
+      if (typeof window !== "undefined" && (window as any).SevenroomsWidget) {
+        // Initialize desktop header button
+        initializeWidget("sr-res-root", "Desktop header button")
+
+        // Initialize dining section button
+        initializeWidget("sr-res-root-dining", "Dining section button")
+
+        // Initialize mobile button if it exists (it might not exist if menu is closed)
+        initializeWidget("sr-res-root-mobile", "Mobile header button")
+      }
+    }
+
+    // Set up a mutation observer to watch for dynamically added elements
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            const element = node as Element
+            // Check if the mobile reservation button was added
+            if (element.id === "sr-res-root-mobile" || element.querySelector("#sr-res-root-mobile")) {
+              setTimeout(() => {
+                if ((window as any).SevenroomsWidget) {
+                  initializeWidget("sr-res-root-mobile", "Mobile header button (dynamic)")
+                }
+              }, 100)
+            }
+          }
+        })
+      })
+    })
+
+    // Start observing
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    })
 
     // Try to initialize immediately if script is already loaded
     if ((window as any).SevenroomsWidget) {
@@ -70,10 +78,12 @@ export default function SevenRoomsWidget() {
     // Clean up after 15 seconds
     setTimeout(() => {
       clearInterval(retryInterval)
+      observer.disconnect()
     }, 15000)
 
     return () => {
       clearInterval(retryInterval)
+      observer.disconnect()
     }
   }, [])
 
@@ -87,30 +97,23 @@ export default function SevenRoomsWidget() {
         setTimeout(() => {
           if (typeof window !== "undefined" && (window as any).SevenroomsWidget) {
             try {
-              // Initialize header button
-              ;(window as any).SevenroomsWidget.init({
-                venueId: "madamechu",
-                triggerId: "sr-res-root",
-                type: "reservations",
-                styleButton: false,
-                clientToken: "",
-              })
-
-              // Initialize mobile button if it exists
-              const mobileButton = document.getElementById("sr-res-root-mobile")
-              if (mobileButton) {
+              // Initialize desktop header button
+              const headerButton = document.getElementById("sr-res-root")
+              if (headerButton && !headerButton.hasAttribute("data-sr-initialized")) {
                 ;(window as any).SevenroomsWidget.init({
                   venueId: "madamechu",
-                  triggerId: "sr-res-root-mobile",
+                  triggerId: "sr-res-root",
                   type: "reservations",
                   styleButton: false,
                   clientToken: "",
                 })
+                headerButton.setAttribute("data-sr-initialized", "true")
+                console.log("Desktop header button initialized on script load")
               }
 
-              // Initialize dining button if it exists
+              // Initialize dining button
               const diningButton = document.getElementById("sr-res-root-dining")
-              if (diningButton) {
+              if (diningButton && !diningButton.hasAttribute("data-sr-initialized")) {
                 ;(window as any).SevenroomsWidget.init({
                   venueId: "madamechu",
                   triggerId: "sr-res-root-dining",
@@ -118,9 +121,12 @@ export default function SevenRoomsWidget() {
                   styleButton: false,
                   clientToken: "",
                 })
+                diningButton.setAttribute("data-sr-initialized", "true")
+                console.log("Dining button initialized on script load")
               }
 
-              console.log("SevenRooms widgets initialized on script load")
+              // Mobile button might not exist yet, so we'll handle it dynamically
+              console.log("Initial widgets initialized on script load")
             } catch (error) {
               console.error("Error in onLoad initialization:", error)
             }

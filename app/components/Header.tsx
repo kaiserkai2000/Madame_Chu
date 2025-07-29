@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Menu, X, Instagram, Facebook } from "lucide-react"
@@ -12,6 +12,31 @@ export default function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
+
+  // Initialize SevenRooms widget for mobile button when menu opens
+  useEffect(() => {
+    if (isMenuOpen && (window as any).SevenroomsWidget) {
+      // Small delay to ensure the mobile button is rendered
+      setTimeout(() => {
+        const mobileButton = document.getElementById("sr-res-root-mobile")
+        if (mobileButton && !mobileButton.hasAttribute("data-sr-initialized")) {
+          try {
+            ;(window as any).SevenroomsWidget.init({
+              venueId: "madamechu",
+              triggerId: "sr-res-root-mobile",
+              type: "reservations",
+              styleButton: false,
+              clientToken: "",
+            })
+            mobileButton.setAttribute("data-sr-initialized", "true")
+            console.log("Mobile reservation button initialized")
+          } catch (error) {
+            console.error("Error initializing mobile reservation button:", error)
+          }
+        }
+      }, 100)
+    }
+  }, [isMenuOpen])
 
   return (
     <header className="bg-black/80 backdrop-blur-sm fixed w-full z-50">
